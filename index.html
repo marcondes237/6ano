@@ -1,0 +1,175 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Jogo educativo de Matemática para alunos do 6º ano.">
+    <title>Missão Matemática 🚀</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="topo">
+        <a class="logo" href="#" aria-label="Missão Matemática - início">
+            🚀 Missão Matemática
+        </a>
+        <span class="faixa">6º ano • Aprender brincando!</span>
+    </header>
+
+    <main class="container">
+        <!-- TELA INICIAL -->
+        <section id="tela-inicial" class="painel tela-inicial">
+            <div class="ilustracao" aria-hidden="true">
+                <span class="estrela estrela-1">✦</span>
+                <span class="planeta">🪐</span>
+                <span class="foguete">🚀</span>
+                <span class="estrela estrela-2">✧</span>
+            </div>
+
+            <p class="etiqueta">PREPARE-SE PARA DECOLAR!</p>
+            <h1>Uma aventura pelo universo dos números!</h1>
+            <p class="descricao">
+                Resolva os desafios matemáticos, conquiste pontos
+                e mostre que você é um explorador dos números.
+            </p>
+
+            <div class="resumo-regras">
+                <div class="regra">
+                    <span>⭐</span>
+                    <strong>10 pontos</strong>
+                    <small>por acerto</small>
+                </div>
+                <div class="regra">
+                    <span>❤️</span>
+                    <strong>3 vidas</strong>
+                    <small>para jogar</small>
+                </div>
+                <div class="regra">
+                    <span>🧠</span>
+                    <strong>10 desafios</strong>
+                    <small>matemáticos</small>
+                </div>
+            </div>
+
+            <button id="botao-iniciar" class="botao botao-principal">
+                Começar missão 🚀
+            </button>
+            <p class="dica">Leia a pergunta e escolha a resposta correta!</p>
+        </section>
+
+        <!-- TELA DO JOGO -->
+        <section id="tela-jogo" class="painel tela-jogo" hidden>
+            <div class="barra-superior">
+                <div class="indicador">
+                    <span>⭐</span>
+                    <div>
+                        <small>PONTOS</small>
+                        <strong id="pontuacao">0</strong>
+                    </div>
+                </div>
+
+                <div class="indicador vidas-indicador">
+                    <span>❤️</span>
+                    <div>
+                        <small>VIDAS</small>
+                        <strong id="vidas">❤️❤️❤️</strong>
+                    </div>
+                </div>
+            </div>
+
+            <div class="progresso-info">
+                <span id="numero-pergunta">DESAFIO 1 DE 10</span>
+                <span id="porcentagem">0%</span>
+            </div>
+
+            <div
+                class="barra-progresso"
+                role="progressbar"
+                aria-label="Progresso da missão"
+                aria-valuemin="0"
+                aria-valuemax="10"
+                aria-valuenow="0"
+                id="barra-progresso"
+            >
+                <div id="progresso" class="progresso"></div>
+            </div>
+
+            <div class="categoria" id="categoria">🔢 OPERAÇÕES</div>
+
+            <h1 id="pergunta" class="pergunta" tabindex="-1">
+                Quanto é 8 + 5?
+            </h1>
+
+            <p class="instrucao">Escolha uma alternativa:</p>
+
+            <div id="alternativas" class="alternativas">
+                <!-- As alternativas são criadas pelo JavaScript. -->
+            </div>
+
+            <div
+                id="feedback"
+                class="feedback"
+                role="status"
+                aria-live="polite"
+                hidden
+            ></div>
+
+            <button
+                id="botao-proxima"
+                class="botao botao-principal"
+                hidden
+            >
+                Próximo desafio →
+            </button>
+
+            <p class="rodape-jogo">🌟 Cada desafio é uma nova descoberta!</p>
+        </section>
+
+        <!-- TELA FINAL -->
+        <section id="tela-final" class="painel tela-final" hidden>
+            <div id="icone-final" class="icone-final" aria-hidden="true">
+                🏆
+            </div>
+
+            <p class="etiqueta">MISSÃO ENCERRADA</p>
+            <h1 id="titulo-final">Parabéns, explorador!</h1>
+            <p id="mensagem-final" class="descricao">
+                Você concluiu sua aventura matemática!
+            </p>
+
+            <div class="cartao-resultado">
+                <span>⭐ Sua pontuação</span>
+                <strong id="pontuacao-final">0</strong>
+                <small>pontos conquistados</small>
+            </div>
+
+            <div class="estatisticas">
+                <div>
+                    <strong id="acertos-final">0</strong>
+                    <span>Acertos</span>
+                </div>
+                <div>
+                    <strong id="erros-final">0</strong>
+                    <span>Erros</span>
+                </div>
+                <div>
+                    <strong id="aproveitamento-final">0%</strong>
+                    <span>Aproveitamento</span>
+                </div>
+            </div>
+
+            <button id="botao-reiniciar" class="botao botao-principal">
+                Jogar novamente 🔄
+            </button>
+
+            <p class="dica">Continue praticando. Aprender também é uma aventura!</p>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <p>Missão Matemática © 2026</p>
+        <p>Projeto educativo • 6º ano do Ensino Fundamental</p>
+    </footer>
+</body>
+</html>
